@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Typography */
+    body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f4f4;
+    }
+
+    /* Container */
+    .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+        .header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+    /* Hero Section */
+    .hero {
+        background: url('hero-image.jpg') no-repeat center center/cover;
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero .explore-button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            background-color: #ff6347;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .hero .explore-button:hover {
+                background-color: #e55337;
+            }
+
+    /* Content Section */
+    .content {
+        padding: 4rem 0;
+        text-align: center;
+        background-color: #fff;
+        margin-top: -5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #ff6347;
+        }
+
+    .intro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+        .intro img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+    .intro-text {
+        max-width: 600px;
+    }
+
+        .intro-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+    /* Footer */
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Book Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">Book Shop</div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Our Book Shop</h1>
+            <p>Your gateway to a world of books and knowledge</p>
+             <p>If you want to buy a book from our app, please <a href="/Identity/Account/Register">register</a>.</p>
+            <a href="#content" class="explore-button">Explore Now</a>
+        </div>
+    </section>
+    <section id="content" class="content">
+        <div class="container">
+            <h2>About Our Book Shop</h2>
+            <div class="intro">
+                <img src="https://s3.eu-west-2.amazonaws.com/s3-stjames-istjames/images/places/hatchards/_t1200x720/Hatchard-Places-1200x750.jpg" alt="Book Shop Image">
+                <div class="intro-text">
+    <p>Welcome to our Book Shop, your number one source for all things books. We're dedicated to giving you the very best of literature, with a focus on dependability, customer service, and uniqueness.</p>
+    <p>Founded in 2024, our Book Shop has come a long way from its beginnings. When we first started out, our passion for providing the best literary resources drove us to do intense research and gave us the impetus to turn hard work and inspiration into a booming online store. We now serve customers all over the world and are thrilled to be a part of the quirky, eco-friendly, fair trade wing of the book industry.</p>
+    <p>We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.</p>
+   
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Book Shop. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+

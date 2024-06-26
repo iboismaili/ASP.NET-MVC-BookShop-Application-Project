@@ -1,0 +1,93 @@
+﻿@model BookShop1.Models.Book
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="my-4">Book Details</h1>
+
+<div class="card mb-4 shadow-sm">
+    <div class="card-header">
+        <h4 class="card-title">@Model.Title</h4>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3 text-muted">
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt class="col-sm-3 text-muted">
+                @Html.DisplayNameFor(model => model.YearPublished)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.YearPublished)
+            </dd>
+            <dt class="col-sm-3 text-muted">
+                @Html.DisplayNameFor(model => model.Numpages)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Numpages)
+            </dd>
+            <dt class="col-sm-3 text-muted">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt class="col-sm-3 text-muted">
+                @Html.DisplayNameFor(model => model.Publisher)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Publisher)
+            </dd>
+            <dt class="col-sm-3 text-muted">
+                @Html.DisplayNameFor(model => model.FrontPage)
+            </dt>
+            <dd class="col-sm-9">
+                <img src="@Model.FrontPage" alt="Book Front Page" class="img-fluid rounded" />
+            </dd>
+            <dt class="col-sm-3 text-muted">
+                @Html.DisplayNameFor(model => model.DownloadUrl)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.DownloadUrl)
+            </dd>
+            <dt class="col-sm-3 text-muted">
+                Author
+            </dt>
+            <dd class="col-sm-9">
+                @Model.Author.FirstName @Model.Author.LastName
+            </dd>
+        </dl>
+    </div>
+    <div class="card-footer">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
+
+<style>
+    .card {
+        margin-top: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .card-body dl {
+        margin-bottom: 0;
+    }
+
+    .card-footer {
+        text-align: right;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+</style>

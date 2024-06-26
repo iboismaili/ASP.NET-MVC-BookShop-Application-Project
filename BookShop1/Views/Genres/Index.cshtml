@@ -1,0 +1,116 @@
+﻿@model IEnumerable<BookShop1.Models.Genre>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"] - Genres</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            margin: 20px 0;
+            text-align: center;
+            color: #343a40;
+        }
+
+        .table {
+            margin: 20px auto;
+            width: 80%;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+            .table thead {
+                background-color: #343a40;
+                color: #ffffff;
+            }
+
+            .table tbody tr:hover {
+                background-color: #f1f1f1;
+            }
+
+            .table tbody tr td {
+                vertical-align: middle;
+            }
+
+        .btn {
+            border-radius: 20px;
+            margin: 0 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border: none;
+        }
+
+            .btn-danger:hover {
+                background-color: #c82333;
+            }
+
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+        }
+
+            .btn-success:hover {
+                background-color: #218838;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Genres</h1>
+        <p class="text-center">
+            <a class="btn btn-success" asp-action="Create" asp-controller="Genres">Create New</a>
+        </p>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GenreName)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GenreName)
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" asp-action="Edit" asp-controller="Genres" asp-route-id="@item.Id">Edit</a>
+                            <a class="btn btn-info" asp-action="Details" asp-controller="Genres" asp-route-id="@item.Id">Details</a>
+                            <a class="btn btn-danger" asp-action="Delete" asp-controller="Genres" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
